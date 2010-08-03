@@ -4,6 +4,10 @@ Here is a simple module for generating correctly signed tickets for use with the
 
 For more info on mod\_auth\_pubtkt see: [https://neon1.net/mod\_auth_pubtkt](https://neon1.net/mod\_auth_pubtkt/)
 
+## Install
+
+	sudo gem install mod-auth-pubtkt-rb
+
 ## Usage
 
 ### Generate a public / private key pair
