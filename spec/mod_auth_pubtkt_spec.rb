@@ -5,8 +5,8 @@ describe ModAuthPubTkt do
 
   describe "#create_ticket" do
     
-    dsa_key_file = File.dirname(__FILE__) + "/../examples/dsaprivkey.pem"
-    rsa_key_file = File.dirname(__FILE__) + "/../examples/rsaprivkey.pem"    
+    dsa_key_file = File.dirname(__FILE__) + "/../examples/private/dsaprivkey.pem"
+    rsa_key_file = File.dirname(__FILE__) + "/../examples/private/rsaprivkey.pem"    
     
     it "should encrypt correctly using a DSA cert" do
             

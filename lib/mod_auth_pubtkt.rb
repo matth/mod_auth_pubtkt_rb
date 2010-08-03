@@ -93,18 +93,7 @@ module ModAuthPubTkt
       OpenSSL::PKey::RSA.new File.read(path)
     end
   end
-  
-  
-  # function adapted according to php: generates an IPv4 Internet network address 
-  # from its Internet standard format (dotted string) representation.
-  def ip2long(ip)
-    long = 0
-    ip.split( /\./ ).reverse.each_with_index do |x, i|
-      long += x.to_i << ( i * 8 )
-    end
-    long
-  end
 
-  module_function :create_ticket, :encrypt, :verify, :open_key_file, :ip2long
+  module_function :create_ticket, :encrypt, :verify, :open_key_file
       
 end
