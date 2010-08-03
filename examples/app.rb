@@ -1,7 +1,8 @@
 require "rubygems"
 require "sinatra"
+require "mod_auth_pubtkt"
 
-require File.dirname(__FILE__) + "/../lib/mod_auth_pubtkt.rb"
+# require File.dirname(__FILE__) + "/../lib/mod_auth_pubtkt.rb"
 
 get "/" do
   <<-HTML
@@ -22,7 +23,7 @@ post "/" do
   details = request.env['rack.request.form_hash']
   
   if details["user"] == "test" && details["pass"] = "test"
-    ticket = ModAuthPubTkt.create_ticket 12345, Time.now + 3600, File.dirname(__FILE__) + "/rsaprivkey.pem", "RSA"
+    ticket = ModAuthPubTkt.create_ticket 12345, Time.now + 3600, File.dirname(__FILE__) + "/private/rsaprivkey.pem", "RSA"
     response.set_cookie("token", { :path => "/", :value => ticket })
     redirect "/signin/ok/"    
   else 
