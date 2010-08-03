@@ -10,3 +10,6 @@ namespace :test do
   
 end
 
+task :gem do
+  sh 'gem build mod-auth-pubtkt-rb.gemspec'
+end
