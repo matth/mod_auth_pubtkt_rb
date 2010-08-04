@@ -47,7 +47,7 @@ module ModAuthPubTkt
         
     key    = open_key_file(key_path, key_type)
     
-    tkt    = "uid=#{uid};validuntil=#{expires.to_i};cip=#{cip};tokens=#{tokens};udata=#{udata};grace_period=17987";
+    tkt    = "uid=#{uid};validuntil=#{expires.to_i};cip=#{cip};tokens=#{tokens};udata=#{udata};grace_period=#{grace_period}";
     
     sig    = encrypt tkt, key
     
