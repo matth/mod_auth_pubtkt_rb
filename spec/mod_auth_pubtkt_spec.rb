@@ -36,11 +36,11 @@ describe ModAuthPubTkt do
 
     it "should push all the args through correctly" do
       time = Time.now
-      tkt     = ModAuthPubTkt.create_ticket 12345, Time.now + 3600, dsa_key_file, "DSA", '127.0.0.1', 'admin,user', 'username:test', 1234
+      tkt     = ModAuthPubTkt.create_ticket 12345, time + 3600, dsa_key_file, "DSA", '127.0.0.1', 'admin,user', 'username:test', 1234
       tkt.should =~ /cip=127\.0\.0\.1/
       tkt.should =~ /tokens=admin\,user/
       tkt.should =~ /udata=username\:test/
-      tkt.should =~ /graceperiod=1234/
+      tkt.should =~ /graceperiod=#{(time + 3600 - 1234).to_i}/
     end
 
   end
