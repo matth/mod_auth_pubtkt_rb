@@ -51,7 +51,7 @@ module ModAuthPubTkt
 
     sig    = encrypt tkt, key
 
-    tkt + ";sig=" + Base64.b64encode(sig).gsub("\n", '').strip
+    tkt + ";sig=" + Base64.encode64(sig).gsub("\n", '').strip
 
   end
 
