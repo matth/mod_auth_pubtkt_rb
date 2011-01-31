@@ -10,6 +10,7 @@ namespace :test do
   
 end
 
+desc "Build the gem from gemspec"
 task :gem do
   sh 'gem build mod-auth-pubtkt-rb.gemspec'
 end
