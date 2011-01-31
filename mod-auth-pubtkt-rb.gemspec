@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "mod-auth-pubtkt-rb"
-  s.version = "0.0.3"
+  s.version = "0.0.4"
   s.author = "Matt Haynes"
   s.email = "matt@matthaynes.net"
   s.homepage = "http://github.com/matth/mod_auth_pubtkt_rb"
